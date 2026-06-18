@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "farm_registry",
+    "harvest_token",
+    "lending_pool",
+    "credit_scoring",
+    "yield_oracle"
+]

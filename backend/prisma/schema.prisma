@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Farm {
+  id        String @id
+  owner     String
+  metadata  String?
+  createdAt DateTime @default(now())
+}
+
+model KycRecord {
+  id        String @id @default(uuid())
+  subject   String
+  docCid    String
+  createdAt DateTime @default(now())
+}
